@@ -13,29 +13,75 @@
 /* :root in CSS for defining global variables is to declare variables at the top of the file */
 /* The equivelant in SCSS is $ - IE $main-bg-color: darkblue; */
 
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 nav {
-    background-color: darkblue;
-    padding: 10px
+    background-color: var(--main-bg-color);
+    padding: var(--nav-padding);
 }
 
 nav a{
-    color: white;
+    color: var(--link-text-color);
     display: block;
-    padding: 20px;
+    padding: var(--link-padding);
 }
 
 h1{
-    color: darkblue;
+    color: var(--main-text-color);
 }
 
 img{
-    width: 150px;
+    width: var(--img-width);
     height: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
+    border: var(--img-border);
+    padding: var(--img-padding);
+    box-shadow: var(--box-shadow);
 }
 
 p{
-    padding: 10px;
+    padding: var(--paragraph-padding);
+}
+
+/* Profile image floating to the right */
+.profile-img {
+    float: right;
+    margin-left: 20px;
+}
+
+/* Class Selectors */
+.box {
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    background-color: var(--box-bg-color);
+    color: var(--box-text-color);
+}
+
+/* Aside section styling */
+aside {
+    position: relative;
+    width: 300px;
+    text-align: center;
+}
+
+/* Styling for the image inside the aside */
+aside img {
+    width: 100%; /*image spans the full width of the aside */
+    height: auto;
+}
+
+/* Overlay heading on the aside image */
+aside h2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.2rem;
 }
