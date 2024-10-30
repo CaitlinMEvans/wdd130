@@ -15,10 +15,12 @@
 
 /* Universal Selector */
 * {
-    margin: 0;
-    padding: 0;
+    max-width: 98%;  /* content takes up 98% but leaves 2% whitespace on the sides */
+    margin: 0 auto;
+    padding: 0 auto;
     box-sizing: border-box;
 }
+
 nav {
     background-color: var(--main-bg-color);
     padding: var(--nav-padding);
@@ -64,7 +66,7 @@ p{
 /* Aside section styling */
 aside {
     position: relative;
-    width: 300px;
+    width: 20em;
     text-align: center;
 }
 
