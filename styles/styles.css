@@ -15,7 +15,7 @@
 
 /* Universal Selector */
 * {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     max-width: 98%;  /* content takes up 98% but leaves 2% whitespace on the sides */
@@ -33,6 +33,10 @@ nav a{
 }
 main {
     max-width: 840px;
+}
+
+main image{
+    float: right;
 }
 
 h1{
