@@ -15,10 +15,10 @@
 
 /* Universal Selector */
 * {
-    max-width: 98%;  /* content takes up 98% but leaves 2% whitespace on the sides */
     margin: 0 auto;
-    padding: 0 auto;
+    padding: 0;
     box-sizing: border-box;
+    max-width: 98%;  /* content takes up 98% but leaves 2% whitespace on the sides */
 }
 
 nav {
