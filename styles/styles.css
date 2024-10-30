@@ -1,3 +1,18 @@
+:root {
+    --main-bg-color: darkblue;
+    --main-text-color: darkblue;
+    --link-text-color: white;
+    --nav-padding: 10px;
+    --link-padding: 20px;
+    --img-width: 150px;
+    --img-border: 1px solid black;
+    --img-padding: 2px;
+    --box-shadow: 0 0 30px gray;
+    --paragraph-padding: 10px;
+} 
+/* :root in CSS for defining global variables is to declare variables at the top of the file */
+/* The equivelant in SCSS is $ - IE $main-bg-color: darkblue; */
+
 nav {
     background-color: darkblue;
     padding: 10px
