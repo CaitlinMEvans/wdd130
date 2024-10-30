@@ -31,6 +31,9 @@ nav a{
     display: block;
     padding: var(--link-padding);
 }
+main {
+    max-width: 840px;
+}
 
 h1{
     color: var(--main-text-color);
@@ -86,4 +89,9 @@ aside h2 {
     padding: 5px;
     border-radius: 5px;
     font-size: 1.2rem;
+}
+footer {
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: center;
 }
