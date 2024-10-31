@@ -81,6 +81,8 @@ img{
 .gallery-image{
     display: block;
     margin: 10px;
+    min-width: 800px;
+    max-width: 800px;
 }
 .social-links {
     margin: 10px;
