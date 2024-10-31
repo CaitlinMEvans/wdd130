@@ -34,9 +34,6 @@ img{
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: auto;
-    overflow: hidden;
 }
 
 .hero img {
@@ -47,7 +44,6 @@ img{
 
 .hero h1 {
     position: absolute;
-    top: 5%;
     background-color: rgba(0, 0, 0, 0.6); /* Dark overlay background */
     color: white;
     padding: 1.5rem;
@@ -74,7 +70,17 @@ img{
     width: 20em;
 }
 
+.gallery-image{
+    display: block;
+    margin: 10px;
+}
+.social-links {
+    margin: 10px;
+}
 .social-links a {
     text-decoration: none;
+}
+.social-links img {
+    max-width: 40px;
 }
 
