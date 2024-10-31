@@ -7,7 +7,7 @@
     --secondary-dark-green: #283618;
 }
 #logo-main {
-    max-width: 20rem;
+    max-width: 15rem;
 }
 
 h1, h2, h3 {
@@ -32,7 +32,11 @@ img{
 /* CLASSES */
 .hero {
     position: relative;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    overflow: hidden;
 }
 
 .hero img {
@@ -43,24 +47,31 @@ img{
 
 .hero h1 {
     position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--primary-yellow);
+    top: 5%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay background */
+    color: white;
+    padding: 1.5rem;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .hero article {
     position: absolute;
-    bottom: 10%;
+    top: 15%;
     right: 5%;
     background-color: rgba(255, 183, 3, 0.8); /* Yellow with some transparency */
     padding: 1rem;
     color: var(--primary-dark-blue);
+    max-width: 90%;
 }
 
 .hero article img {
     float: right;
     margin-left: 1rem;
+    width: 20em;
 }
 
 .social-links a {
