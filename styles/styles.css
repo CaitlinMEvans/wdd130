@@ -1,17 +1,24 @@
 :root {
-    --main-bg-color: darkblue;
-    --main-text-color: darkblue;
-    --link-text-color: white;
+    --dark-blue: #023047;
+    --yellow: #FFB703;
+    --green: #606C38;
+    --blue: #219EBC;
+    --orange: #FB8500;
+    --dark-green: #283618;
+
+    --main-bg-color: var(--dark-blue);
+    --main-text-color: var(--dark-blue);
+    --link-text-color: var(--yellow);
     --nav-padding: 10px;
-    --link-padding: 15px; /* Reduced padding for better fit */
+    --link-padding: 15px;
     --img-width: 150px;
-    --img-border: 1px solid black;
-    --img-padding: 2px;
-    --box-shadow: 0 0 30px gray;
+    --img-border: 2px solid var(--dark-green);
+    --img-padding: 3px;
+    --box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     --paragraph-padding: 10px;
-    --box-bg-color: lightgray; /* Added default for box background */
-    --box-text-color: black; /* Added default for box text color */
-} 
+    --box-bg-color: var(--green);
+    --box-text-color: white;
+}
 
 /* Universal Selector */
 * {
@@ -28,22 +35,28 @@ header, .grid, footer {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: var(--main-bg-color);
     padding: var(--nav-padding);
 }
 
-nav ul{
+nav ul {
     display: flex;
     list-style-type: none;
-    padding-left: 0; /* Optional: removes the left padding */
-    margin-left: 0;  /* Optional: aligns with other elements */
+    padding-left: 0;
+    margin-left: 0;
 }
 
 nav a {
     color: var(--link-text-color);
     padding: var(--link-padding);
     text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--orange);
+    color: white;
 }
 
 .grid {
@@ -56,13 +69,13 @@ main {
     max-width: 840px;
 }
 
-#profile-img{
+#profile-img {
     margin: 40px 0;
 }
 
 h1 {
     color: var(--main-text-color);
-    border-bottom: 2px solid var(--main-text-color);
+    border-bottom: 2px solid var(--blue);
     padding-bottom: 0.5rem;
     margin-top: 1rem;
 }
@@ -94,17 +107,35 @@ p {
     color: var(--box-text-color);
 }
 
+.box ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.box a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 10px;
+}
+
+.box a:hover {
+    color: white;
+    background-color: var(--dark-green);
+    padding: 10px;
+}
+
 /* Aside section styling */
 aside {
     position: relative;
-    
 }
 
 /* Styling for the image inside the aside */
 aside img {
     width: 100%;
     height: auto;
-    border-radius: 5px; /* Optional for rounded image edges */
+    border-radius: 5px;
 }
 
 /* Overlay heading on the aside image */
@@ -123,4 +154,16 @@ footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
+    color: var(--dark-blue);
+}
+
+/* Footer hover for links */
+footer a {
+    color: var(--yellow);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--orange);
 }
