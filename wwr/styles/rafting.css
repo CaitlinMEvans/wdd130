@@ -51,7 +51,10 @@ img{
 
 .hero h1 {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay background */
+/* trying color combinations */
+    /* background-color: rgba(0, 0, 0, 0.6); Dark overlay background */
+    background-color: rgba(40, 54, 24, 0.8); /* Dark overlay with transparency */
+    /* background-color: rgba(2, 48, 71, 0.6); Dark blue overlay with 60% opacity */
     color: white;
     padding: 1.5rem;
     max-width: 600px;
