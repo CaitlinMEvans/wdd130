@@ -99,7 +99,7 @@ p {
 }
 
 /* Class Selectors */
-.box {
+.box1 {
     margin: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1rem;
@@ -107,20 +107,20 @@ p {
     color: var(--box-text-color);
 }
 
-.box ul {
+.box1 ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
 }
 
-.box a {
+.box1 a {
     color: var(--white);
     text-decoration: none;
     transition: color 0.3s, background-color 0.3s;
     padding: 10px;
 }
 
-.box a:hover {
+.box1 a:hover {
     color: white;
     background-color: var(--dark-green);
     padding: 10px;
