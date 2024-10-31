@@ -19,11 +19,19 @@ p {
     font-size: 1rem;
     line-height: 1.6;
 }
-body {
+
+/* .white-space{
     max-width: 98%;
     margin: 0 auto;
-    /* background-color: var(--primary-green); */
-}
+} */
+
+/* body {
+    margin: 0 auto;
+} */
+
+/* main *:not(.hero){
+    max-width: 98%;
+} */
 
 img{
     max-width: 100%;
@@ -37,8 +45,7 @@ img{
 }
 
 .hero img {
-    display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -68,6 +75,7 @@ img{
     float: right;
     margin-left: 1rem;
     width: 20em;
+    border-radius: 4px;
 }
 
 .gallery-image{
