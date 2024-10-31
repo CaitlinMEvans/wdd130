@@ -6,6 +6,10 @@
     --secondary-orange: #FB8500;
     --secondary-dark-green: #283618;
 }
+#logo-main {
+    max-width: 20rem;
+}
+
 h1, h2, h3 {
     color: var(--primary-dark-blue);
 }
@@ -16,10 +20,15 @@ p {
     line-height: 1.6;
 }
 body {
-    max-width: 80%;
+    max-width: 98%;
     margin: 0 auto;
-    background-color: var(--primary-green);
+    /* background-color: var(--primary-green); */
 }
+
+img{
+    max-width: 100%;
+}
+
 /* CLASSES */
 .hero {
     position: relative;
@@ -28,7 +37,7 @@ body {
 
 .hero img {
     display: block;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -54,7 +63,7 @@ body {
     margin-left: 1rem;
 }
 
-.social_links a {
+.social-links a {
     text-decoration: none;
 }
 
