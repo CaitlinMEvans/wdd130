@@ -120,6 +120,7 @@ header {
     position: relative;
     display: flex;
     justify-content: center;
+    top: -35px;
 }
 
 .about-hero img.none {
