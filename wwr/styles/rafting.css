@@ -71,10 +71,10 @@ header {
 
 .main-nav a:hover {
     background-color: var(--primary-yellow);
-    color: #ffffff;
+    color: #000;
+}
 
-}/* CLASSES */ 
-
+/* CLASSES */ 
 .hero {
     position: relative;
     display: flex;
