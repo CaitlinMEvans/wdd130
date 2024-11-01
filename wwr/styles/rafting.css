@@ -362,6 +362,53 @@ form textarea:focus {
     border-color: var(--primary-green);
 }
 
+/*  couldnt use drop down - assignment required radio */
+/* Custom dropdown styling for radio options */
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.custom-dropdown input[type="radio"] {
+    display: none; /* Hide the actual radio buttons */
+}
+
+.custom-dropdown label {
+    display: block;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+}
+
+.custom-dropdown label:last-child {
+    border-bottom: none; /* Remove border from the last option */
+}
+
+/* Highlight the selected option with primary green, white font, and check mark */
+.custom-dropdown input[type="radio"]:checked + label {
+    background-color: var(--primary-green);
+    color: white;
+    font-weight: bold;
+}
+
+/* Add check mark as visual indicator for the selected option */
+.custom-dropdown input[type="radio"]:checked + label::after {
+    content: "✓"; /* Check mark symbol */
+    position: absolute;
+    right: 10px; /* Position check mark on the right side */
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+
 form button[type="submit"] {
     background-color: var(--primary-dark-blue);
     color: var(--primary-yellow);
