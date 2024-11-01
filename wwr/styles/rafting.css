@@ -75,6 +75,7 @@ header {
 }
 
 /* CLASSES */ 
+/* Hero Section */
 .hero {
     position: relative;
     display: flex;
@@ -140,6 +141,7 @@ header {
 
 .history p {
     padding: 1rem;
+    color: #000;
 }
 
 .white-space{
