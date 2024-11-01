@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="This is a page for WDD130 and is a practice for web development">
+    <meta name="author" content="Caitlin Evans">
+  <title>WDD 130 | Quiz Form</title>
+  <link rel="stylesheet" href="styles/quiz.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <h1>HTML and CSS Quiz</h1>
+    </header>
+    
+    <main>
+      <section class="purpose">
+        <h2>Quiz Purpose</h2>
+        <p>This quiz is designed to assess your foundational knowledge in HTML and CSS. The questions will help you recall key concepts and ensure you understand the basics of web development. From defining what CSS stands for to identifying valid comments, the quiz provides a quick check on essential HTML and CSS topics.</p>
+        <p>Each question covers a different aspect, making it an engaging and informative exercise. Don’t worry if you’re unsure about a few answers—this quiz is meant to be a learning experience! At the end, simply click "Submit Quiz" to see how well you understand these web development basics.</p>
+      </section>
+      
+      <form>
+        <fieldset>
+          <legend><h1>Basic HTML and CSS Quiz</h1></legend>
+          
+          <label for="q1">1. What does the acronym CSS stand for?</label>
+          <input type="text" id="q1" name="q1" placeholder="Your answer here">
+          
+          <label for="q2">2. How are id and class attributes selected in CSS?</label>
+          <textarea id="q2" name="q2" rows="3" placeholder="Explain your answer here..."></textarea>
+          
+          <label for="q3">3. Which of the following is a valid CSS comment?</label>
+          <select id="q3" name="q3">
+            <option value="" selected disabled>Choose One ...</option>
+            <option value="single-line">/* single-line comment */</option>
+            <option value="html-comment">&lt;!-- HTML style comment --&gt;</option>
+            <option value="inline-comment"># Inline comment</option>
+          </select>
+          
+          <label for="q4">4. What is the bottom margin given this declaration?</label>
+          <div class="code-box">margin: 10px 5px 15px;</div>
+          <input type="number" id="q4" name="q4" placeholder="Enter margin value">
+          
+          <button type="submit">Submit Quiz</button>
+        </fieldset>
+      </form>
+      <h2>Looking for the User Poll Survey?</h2>
+      <p>Be sure to check out the <a href="/week05/poll-form.html" target="_blank"> User Poll Survey</a>!</p>
+    </main>
+  
+    <footer>
+      <p>©2024 | HTML and CSS Quiz | Caitlin Evans</p>
+    </footer>
+  </body>
+  </html>
