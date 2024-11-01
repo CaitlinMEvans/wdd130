@@ -6,10 +6,7 @@
     --secondary-orange: #FB8500;
     --secondary-dark-green: #283618;
 }
-#logo-main {
-    max-width: 15rem;
-}
-
+/* Generic  */
 h1, h2, h3 {
     color: var(--primary-dark-blue);
 }
@@ -18,12 +15,7 @@ p {
     color: var(--secondary-dark-green);
     font-size: 1rem;
     line-height: 1.6;
-}
-
-.white-space{
-    max-width: 98%;
-    margin: 0 auto;
-}
+} 
 
 body {
     margin: 0 auto;
@@ -35,9 +27,35 @@ body {
 
 img{
     max-width: 100%;
+} 
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    max-width: 98%;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: var(--primary-dark-blue);
 }
 
-/* CLASSES */
+#logo-main {
+    max-width: 15rem;
+}
+
+/* CLASSES */ 
+
+.main-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-nav a {
+    color: var(--primary-yellow);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
 .hero {
     position: relative;
     display: flex;
@@ -80,12 +98,54 @@ img{
     width: 20em;
     border-radius: 4px;
 }
+/* History Section */
+.history {
+    display: grid;
+    grid-template-columns: 1fr 500px 1fr;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem;
+    /* background-color: var(--primary-green); */
+    color: white;
+}
 
-.gallery-image{
-    display: block;
-    margin: 10px;
-    min-width: 800px;
-    max-width: 800px;
+.history h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+/* .history img {
+    width: 600px;
+} */
+
+.history p {
+    padding: 1rem;
+}
+
+.white-space{
+    max-width: 98%;
+    margin: 0 auto;
+}
+
+/* Gallery Section */
+.gallery-section {
+    text-align: center;
+    padding: 1rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.gallery-image {
+    width: 400px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 .social-links {
     margin: 10px;
