@@ -217,12 +217,14 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    background-color: var(--primary-dark-blue); 
 }
 
 footer p {
     margin: 0;
     font-size: 1rem;
     font-weight: bold;
+    color: white;
 }
 
 .social-links {
@@ -239,7 +241,9 @@ footer p {
 .social-links img {
     width: 30px; /* Set a uniform width */
     height: 30px; /* Set a uniform height */
-    filter: brightness(0); /* Converts any color in the SVG to black */
+    /* Converts any color in the SVG to black */
+    /* filter: brightness(0);  */
+    filter: brightness(0) invert(1);
 }
 /* Specific size adjustment for the Facebook icon */
 .social-links a[href*="facebook"] img {
