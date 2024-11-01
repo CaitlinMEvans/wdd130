@@ -5,51 +5,44 @@
     --primary-green: #606C38;
     --secondary-dark-green: #283618;
     --border-color: #B0B0B0;
-  }
-  
-  * {
-    /* margin: 0;
-    padding: 0; */
+}
+
+/* Universal Styles */
+* {
     box-sizing: border-box;
-  }
+}
 
-  /* Basic Page Styling */
-  body {
+/* Basic Page Styling */
+body {
     font-family: 'Lora', serif;
-    color: var(--secondary-dark-green);
-    /* margin: 0;
-    padding: 0; */
-  }
-  
-  label, button[type="submit"], legend {
-    font-family: 'Lora', sans-serif;
-  }
+    margin: 0;
+}
 
-  main{
-    max-width:  90%;
+main {
+    max-width: 90%;
     margin: 0 auto;
-  }
-  
-  header, footer {
+}
+
+header, footer {
     background-color: var(--primary-dark-blue);
     color: white;
     text-align: center;
     padding: 1rem;
-  }
-  
-  header h1 {
+}
+
+header h1 {
     margin: 0;
     font-size: 1.5rem;
     font-family: 'Oswald', sans-serif;
-  }
-  
-  footer p {
+}
+
+footer p {
     margin: 0;
     font-size: 1rem;
-  }
-  
-  /* Form Styling */
-  form {
+}
+
+/* Form Styling */
+form {
     max-width: 600px;
     margin: 2rem auto;
     padding: 1.5rem;
@@ -59,67 +52,79 @@
     display: grid;
     gap: 1rem;
     font-family: 'Lora', serif; /* Apply Lora to all form text */
-  }
-  
-  fieldset {
+}
+
+fieldset {
     border: 1px solid var(--border-color);
     border-radius: 6px;
     padding: 1rem;
     margin-bottom: 1.5rem;
-  }
-  
-  legend {
+}
+
+legend {
     font-weight: bold;
     color: var(--primary-dark-blue);
     padding: 0 0.5rem;
     font-family: 'Oswald', sans-serif;
-  }
-  
-  label {
+}
+
+label {
     display: block;
     font-weight: bold;
     margin: 0.5rem 0 0.25rem;
     padding-right: 1rem;
     color: var(--secondary-dark-green);
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  select,
-  textarea {
+}
+
+/* Input and Textarea Styling */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
     width: 100%;
-    padding: 0.7rem; /* Slight increase for better usability */
+    padding: 0.7rem;
     border: 1px solid var(--border-color);
     border-radius: 4px;
-    font-size: 1.1rem; /* Increase font-size for readability */
-  }
-  
-  input[type="checkbox"] {
+    font-size: 1.1rem;
+}
+
+/* Placeholder Text Styling */
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Lora', serif;
+    color: var(--secondary-dark-green);
+    opacity: 0.7;
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
     width: 20px;
     height: 20px;
     vertical-align: bottom;
-  }
+}
 
-  .form-item {
+/* Grid Layout for Form Items */
+.form-item {
     display: grid;
     align-items: center;
-  }
-  
-  .column1 {
+}
+
+.column1 {
     grid-template-columns: 3fr 1fr;
     margin: 0.5rem 0;
-  }
-  
-  .column2 {
+}
+
+.column2 {
     grid-template-columns: 1fr 2fr;
     margin: 0.5rem 0;
-  }
-  
-  textarea {
+}
+
+textarea {
     resize: vertical;
-  }
-  
-  button[type="submit"] {
+}
+
+/* Button Styling */
+button[type="submit"] {
     background-color: var(--primary-dark-blue);
     color: var(--primary-yellow);
     padding: 0.7rem 1.5rem;
@@ -130,10 +135,9 @@
     cursor: pointer;
     display: block;
     margin: 0 auto;
-  }
-  
-  button[type="submit"]:hover {
+}
+
+button[type="submit"]:hover {
     background-color: var(--primary-green);
     color: white;
-  }
-  
+}
