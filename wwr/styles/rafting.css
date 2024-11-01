@@ -329,6 +329,7 @@ header {
 
 .contact-card iframe{
     margin: 1em;
+    border:0;
 }
 /* form styling */
 form {
