@@ -323,10 +323,13 @@ header {
 .contact-card p {
     font-family: 'Lora', serif;
     color: var(--secondary-dark-green);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
+.contact-card iframe{
+    margin: 1em;
+}
 /* form styling */
 form {
     display: flex;
@@ -378,6 +381,7 @@ form button[type="submit"]:hover {
     font-style: normal;
     line-height: 1.6;
     color: var(--secondary-dark-green);
+    margin: 2em;
 }
 
 .contact-card .map {
