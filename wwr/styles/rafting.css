@@ -1,3 +1,4 @@
+/* Root Variables */
 :root {
     --primary-dark-blue: #023047;
     --primary-yellow: #FFB703;
@@ -7,34 +8,32 @@
     --secondary-dark-green: #283618;
     --header-bg: #ffffff;
 }
-/* Generic  */
+
+/* Generic */
 h1, h2, h3 {
     color: var(--primary-dark-blue);
 }
 
 p {
-    /* color: var(--secondary-dark-green); */
     font-size: 1rem;
     line-height: 1.6;
-} 
+}
 
 body {
     margin: 0 auto;
 }
 
-/* main *:not(.hero){
-    max-width: 98%;
-} */
-
-img{
+img {
     max-width: 100%;
-} 
+}
 
 /* LOGO and NAV Section */
 /* Header Styling */
 header {
-    background-color: var(--header-bg);
     padding: 1rem;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
 }
 
 .header-content {
@@ -48,14 +47,15 @@ header {
 /* Logo Styling */
 #logo-main {
     max-width: 15em;
+    padding: 10px;
+    background-color: white;
 }
 
 /* Navigation Styling */
 .main-nav {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+    grid-template-columns: repeat(4, 1fr);
     background-color: var(--primary-dark-blue);
-    /* padding: 0.5rem 0; */
     border-radius: 4px;
 }
 
@@ -74,54 +74,96 @@ header {
     color: #000;
 }
 
-/* CLASSES */ 
-/* ---------------------------- */
-/* About Page Styles  */
-/* ---------------------------- */
+/* Main Hero Section (for Contact Page) */
+.main-hero {
+    /* position: relative; */
+    width: 100%;
+    max-height: 750px; /* Restrict to a maximum height */
+    overflow: hidden;
+}
 
-/* Hero Section */
-.hero {
+.main-hero-image {
+    width: 100%;
+    height: auto; /* Maintain image aspect ratio */
+    max-height: 700px; /* Restrict image height */
+    object-fit: cover; /* Ensures it covers the full width */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place behind the overlay content */
+}
+
+.main-hero-overlay {
+    position: relative; 
+    width: 100%;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+}
+
+.main-hero-overlay h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    color: var(--primary-yellow);
+}
+
+.main-hero-overlay p {
+    font-family: 'Lora', serif;
+    font-size: 1.25rem;
+}
+
+
+
+/* About Hero Section (Specific to About Page) */
+.about-hero {
     position: relative;
     display: flex;
     justify-content: center;
 }
 
-.hero img {
+.about-hero img.none {
     width: 100%;
     height: auto;
 }
 
-.hero h1 {
+.about-hero h1 {
     position: absolute;
-/* trying color combinations */
-    /* background-color: rgba(0, 0, 0, 0.6); Dark overlay background */
-    background-color: rgba(40, 54, 24, 0.8); /* Dark overlay with transparency */
-    /* background-color: rgba(2, 48, 71, 0.6); Dark blue overlay with 60% opacity */
+    background-color: rgba(40, 54, 24, 0.8);
     color: white;
     padding: 1.5rem;
     max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.hero article {
+.about-hero .about-article {
     position: absolute;
     top: 15%;
     right: 5%;
-    background-color: rgba(255, 183, 3, 0.8); /* Yellow with some transparency */
+    background-color: rgba(255, 183, 3, 0.8);
     padding: 1rem;
     color: var(--primary-dark-blue);
     max-width: 90%;
 }
 
-.hero article img {
+.about-hero .article-image {
     float: right;
     margin-left: 1rem;
     width: 20em;
     border-radius: 4px;
 }
+
+.about-hero .about-article h2 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary-dark-blue);
+}
+
+.about-hero .about-article p {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
 /* History Section */
 .history {
     display: grid;
@@ -130,7 +172,6 @@ header {
     gap: 1rem;
     margin: 2rem 0;
     padding: 1rem;
-    /* background-color: var(--primary-green); */
 }
 
 .history h2 {
@@ -138,16 +179,12 @@ header {
     text-align: center;
 }
 
-/* .history img {
-    width: 600px;
-} */
-
 .history p {
     padding: 1rem;
     color: #000;
 }
 
-.white-space{
+.white-space {
     max-width: 98%;
     margin: 0 auto;
 }
@@ -159,41 +196,7 @@ header {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Three images per row */
-    gap: 1rem;
-    padding: 1rem 0;
-}
-
-.gallery figure {
-    margin: 0; /* Remove default margin */
-    text-align: center;
-}
-
-.gallery img {
-    width: 100%;
-    height: 220px; /* Set a uniform height for all images */
-    object-fit: cover; /* Maintain aspect ratio and crop if necessary */
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.gallery figcaption {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: var(--secondary-dark-green);
-    font-style: italic;
-}
-
-
-/* Three images per row */
-/* .gallery-section {
-    text-align: center;
-    padding: 1rem;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
     padding: 1rem 0;
 }
@@ -205,26 +208,23 @@ header {
 
 .gallery img {
     width: 100%;
-    height: auto;
+    height: 220px;
+    object-fit: cover;
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .gallery figcaption {
     margin-top: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--secondary-dark-green);
     font-style: italic;
-} */
-
-/* ---------------------------- */
-/* Contact US Page Styles */
-/* ---------------------------- */
+}
 
 /* Reach Our Team Section */
 .reach-team {
     position: relative;
-    background-image: url("../images/down_rocks.jpg");
+    background-image: url("../images/wide-angle.jpg");
     background-size: cover;
     background-position: center;
     padding: 4rem 2rem;
@@ -233,14 +233,14 @@ header {
 }
 
 .reach-team .background-overlay {
-    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for readability */
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 2rem;
     border-radius: 8px;
     max-width: 600px;
     margin: 0 auto;
 }
 
-/* Help  Section */
+/* Help Section */
 .help-today {
     background-color: var(--secondary-dark-green);
     color: white;
@@ -251,12 +251,13 @@ header {
 .help-today h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
+    color: white;
 }
 
 .help-cards {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 15rem;
 }
 
 .help-card {
@@ -294,63 +295,93 @@ header {
     color: white;
 }
 
-
-
-/* Form Styling */
-form {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    background-color: #f9f9f9;
+/* Contact Section Styling */
+.contact-section {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 5%;
+    background-color: #f3f3f3; /* Light background for contrast */
+}
+
+.contact-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card h2 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary-dark-blue);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.contact-card p {
+    font-family: 'Lora', serif;
+    color: var(--secondary-dark-green);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* form styling */
+form {
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
 }
 
-fieldset {
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-legend {
-    font-family: 'Oswald', sans-serif;
+form label {
     font-weight: bold;
     color: var(--primary-dark-blue);
-    padding: 0 0.5rem;
 }
 
-/* Label Styling */
-label {
-    display: block;
-    font-weight: bold;
-    color: var(--secondary-dark-green);
-    margin: 0.5rem 0 0.25rem;
-}
-
-/* Input and Textarea Styling */
-input[type="text"],
-input[type="email"],
-input[type="number"],
-select,
-textarea {
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
     width: 100%;
     padding: 0.7rem;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--primary-dark-blue); /* Dark blue border */
     border-radius: 4px;
     font-size: 1rem;
 }
 
-textarea {
-    resize: vertical;
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form select:focus,
+form textarea:focus {
+    outline: 2px solid var(--primary-green); /* Optional green outline on focus */
+    border-color: var(--primary-green);
 }
 
-input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    vertical-align: bottom;
+form button[type="submit"] {
+    background-color: var(--primary-dark-blue);
+    color: var(--primary-yellow);
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+.contact-card address {
+    font-style: normal;
+    line-height: 1.6;
+    color: var(--secondary-dark-green);
+}
+
+.contact-card .map {
+    margin-top: 1rem;
+    border-radius: 4px;
 }
 
 /* Placeholder Text Styling */
@@ -377,49 +408,6 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: var(--primary-green);
     color: white;
-}
-
-/* Employee Profiles Section */
-.employee-profiles {
-    text-align: center;
-    margin: 2rem 0;
-}
-
-.employee-profiles h2 {
-    font-family: 'Oswald', sans-serif;
-    color: var(--primary-dark-blue);
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-.profile-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    max-width: 1000px; /* Wider to accommodate five profiles */
-    margin: 0 auto;
-}
-
-.profile-grid figure {
-    text-align: center;
-    border: 1px solid var(--border-color);
-    padding: 1rem;
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.profile-grid img {
-    max-width: 100%;
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
-}
-
-.profile-grid figcaption {
-    font-family: 'Lora', serif;
-    color: var(--secondary-dark-green);
-    font-size: 1rem;
-    line-height: 1.4;
 }
 
 /* Contact Information and Map */
@@ -450,16 +438,73 @@ button[type="submit"]:hover {
 
 .map {
     width: 100%;
-    height: 200px;
+    /* height: 200px; -- Embeded the height:   */ 
     border: 0;
     border-radius: 8px;
 }
 
-/* ---------------------------- */
+/* Employee Profiles Section */
+.employee-profiles {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.employee-profiles h2 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary-dark-blue);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.profile-grid figure {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.profile-grid figure:hover {
+    transform: translateY(-5px);
+}
+
+.profile-grid img {
+    width: 200px;
+    /* height: 200px; */
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.profile-grid figcaption {
+    font-family: 'Lora', serif;
+    color: var(--secondary-dark-green);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.profile-grid figcaption strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--primary-dark-blue);
+    margin-bottom: 0.3rem;
+}
+
+.profile-grid figcaption span {
+    font-size: 0.9rem;
+    color: var(--secondary-dark-green);
+    opacity: 0.8;
+}
+
 /* Footer Styles */
-/* ---------------------------- */
-
-
 footer {
     display: flex;
     justify-content: space-between;
@@ -476,9 +521,9 @@ footer p {
 }
 
 .social-links {
-    display: flex; /* Arrange links in a row */
+    display: flex;
     align-items: center;
-    gap: 1rem; /* Add space between icons */
+    gap: 1rem;
 }
 
 .social-links a {
@@ -487,13 +532,11 @@ footer p {
 }
 
 .social-links img {
-    width: 30px; /* Set a uniform width */
-    height: 30px; /* Set a uniform height */
-    /* Converts any color in the SVG to black */
-    /* filter: brightness(0);  */
+    width: 30px;
+    height: 30px;
     filter: brightness(0) invert(1);
 }
-/* Specific size adjustment for the Facebook icon */
+
 .social-links a[href*="facebook"] img {
-    transform: scale(1.2); /* Slightly increases the Facebook icon size */
+    transform: scale(1.2);
 }

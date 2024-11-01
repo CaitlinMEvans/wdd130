@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Rivers of Eden Rafting Adventure Co. Project for the contact us page">
     <meta name="author" content="Caitlin Evans">
-    <title>CONTACT US | Rivers of Eden Rafting Adventure Co.</title>
+    <title> CONTACT US | Rivers of Eden Rafting Adventure Co.</title>
     <link rel="stylesheet" href="styles/rafting.css">
     <!-- GOOGLE FONTS PRECONNECT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,16 +26,17 @@
             </nav> 
         </div>
     </header>    
+    
     <main>
-        <!-- <img src="images/down_rocks.jpg" alt="Rafters navigating rocky path"> -->
-        <section class="reach-team">
-            <div class="background-overlay">
-                <h2>Reach Our Team</h2>
-                <p>We love questions and feedback—and we're always happy to help! Here are some ways to contact us.</p>
+        <div class="main-hero">
+            <!-- <img src="images/wide-angle.jpg" alt="Kayaker on River with wide-angle" class="main-hero-image"> -->
+            <img src="images/oars_up.jpg" alt="Kayaker Aerial view" class="main-hero-image">
+            <div class="main-hero-overlay"> 
+                <h1>Reach Our Team</h1>
+                <p>We love questions and feedback – and we're always happy to help! Here are some ways to contact us.</p>
             </div>
-        </section>
-        
-        
+        </div>        
+
         <section class="help-today">
             <h2>How can we help you today?</h2>
             <div class="help-cards">
@@ -51,89 +52,103 @@
                 </article>
             </div>
         </section>
-
-        <section class="contact-details">
-            <div class="contact-form">
-                <h3>Need something else?</h3>
-                <p>Use our contact form and we will reach out to you directly within 24 business hours.</p>
-                <form onsubmit="event.preventDefault(); alert('The form is for demonstration and would have submitted successfully.');">
-                    <label for="fullname">Full Name</label>
-                    <input type="text" id="fullname" name="fullname" placeholder="Your name">
-                    
+        
+        <section class="contact-section">
+            <div class="contact-card">
+                <h2>Need something else?</h2>
+                <p>Use our contact form, and we will reach out to you directly within 24 business hours.</p>
+                <form action="#" method="POST">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Your name">
+        
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Your email address">
-                    
-                    <label for="purpose">What can we help with?</label>
-                    <div class="radio-options">
-                        <label><input type="radio" name="purpose" value="general-inquiry"> General Inquiry</label>
-                        <label><input type="radio" name="purpose" value="reservation-question"> Reservation Question</label>
-                        <label><input type="radio" name="purpose" value="website-suggestion"> Website Suggestion</label>
-                        <label><input type="radio" name="purpose" value="website-suggestion"> Other</label>
-                    </div>
-
+        
+                    <label for="help-option">What can we help with?</label>
+                    <select id="help-option" name="help-option">
+                        <option disabled selected>Select option</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="reservation">Reservation Question</option>
+                        <option value="website">Website Suggestion</option>
+                        <option value="other">Other</option>
+                    </select>
+        
                     <label for="message">Leave us a message</label>
                     <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
-
-                    <label><input type="checkbox" name="subscribe"> Would you like to be subscribed to the newsletter?</label>
+        
+                    <label>
+                        <input type="checkbox" name="newsletter" value="yes">
+                        Would you like to sign up for our Newsletter?
+                    </label>
+        
                     <button type="submit">Send Message</button>
                 </form>
             </div>
-
-            <div class="headquarters">
-                <h3>Headquarters</h3>
-                <p>Multi-day trip reservations and general questions</p>
+        
+            <div class="contact-card">
+                <h2>Headquarters</h2>
+                <p>While we have many locations, our headquarters is where we receive mailed contact.</p>
                 <address>
-                    7258 S Racquet Club Dr<br>
-                    Salt Lake City, UT 84121<br>
-                    M-F: 8am - 5pm Mountain Time<br>
-                    <strong>Main Line:</strong> 801.123.1234 <br>
-                    <strong>Toll-Free:</strong> 800.123.1234<br>
-                    <a href="mailto:Support@Rivers-of-Eden.com">Support@Rivers-of-Eden.com</a>
+                    1234 Fake Address Street, Suite 777<br>
+                    Fake City, STATE 1234-4567<br>
+                    North America<br>
+                    <br>
+                    Office Hours: 8am - 5pm (Mountain Time) Monday - Friday<br>
+                    Closed Federal Holidays <br>
+                    <strong>Main Line:</strong> <a href="tel:8011231234">801.123.1234</a> OR Toll Free: <a href="tel:8001231234">800.123.1234</a><br>
+                    <strong>Email:</strong> <a href="mailto:support@rivers-of-eden.com">support@rivers-of-eden.com</a>
                 </address>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.495882839731!2d-111.82952918468285!3d40.596982779347816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874d9b7e8a9d17d1%3A0xafeef33bb5f1ff1a!2s7258%20Racquet%20Club%20Dr%2C%20Cottonwood%20Heights%2C%20UT%2084121%2C%20USA!5e0!3m2!1sen!2sus!4v1615661231533!5m2!1sen!2sus" width="100%" height="200" allowfullscreen="" loading="lazy"></iframe>
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.7709469389015!2d-111.83087818459454!3d40.6186331793426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x875289f3a000b0f1%3A0xd6c6bfbfeb9c9981!2s7258%20S%20Racquet%20Club%20Dr%2C%20Salt%20Lake%20City%2C%20UT%2084121%2C%20USA!5e0!3m2!1sen!2sus!4v1602170421458!5m2!1sen!2sus" 
+                width="100%" height="400" frameborder="0" allowfullscreen aria-hidden="false" tabindex="0" class="map">
+                </iframe>
             </div>
         </section>
-
+        
         <section class="employee-profiles">
-            <h2>Meet Our Team</h2>
-            <div class="profile-grid">
-                <figure>
-                    <img src="images/placeholder.jpg" alt="Photo of Alex Jordan">
-                    <figcaption>
-                        <strong>Alex Jordan</strong><br>
-                        Certified Rafting Professional
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="images/placeholder.jpg" alt="Photo of Sarah Lee">
-                    <figcaption>
-                        <strong>Sarah Lee</strong><br>
-                        Travel Guide
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="images/placeholder.jpg" alt="Photo of Chris Patel">
-                    <figcaption>
-                        <strong>Chris Patel</strong><br>
-                        Customer Support Specialist
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="images/placeholder.jpg" alt="Photo of Maria Chen">
-                    <figcaption>
-                        <strong>Maria Chen</strong><br>
-                        Senior Sales Representative
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="images/placeholder.jpg" alt="Photo of Ben Martinez">
-                    <figcaption>
-                        <strong>Ben Martinez</strong><br>
-                        Travel Guide
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
+            <section class="employee-profiles">
+                <h2>Meet Our Team</h2>
+                <div class="profile-grid">
+                    <figure>
+                        <img src="images/happy_woman.jpg" alt="Alex Jordan">
+                        <figcaption>
+                            <strong>Alex Jordan</strong><br>
+                            <span>Certified Rafting Professional</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/happy_woman.jpg" alt="Sarah Lee">
+                        <figcaption>
+                            <strong>Sarah Lee</strong><br>
+                            <span>Travel Guide</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/happy_woman.jpg" alt="Chris Patel">
+                        <figcaption>
+                            <strong>Chris Patel</strong><br>
+                            <span>Customer Support Specialist</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/happy_woman.jpg" alt="Maria Chen">
+                        <figcaption>
+                            <strong>Maria Chen</strong><br>
+                            <span>Senior Sales Representative</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/happy_woman.jpg" alt="Ben Martinez">
+                        <figcaption>
+                            <strong>Ben Martinez</strong><br>
+                            <span>Travel Guide</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+            
+        
+
     </main>
 
     <footer>
