@@ -22,7 +22,7 @@
   }
   
   label, button[type="submit"], legend {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lora', sans-serif;
   }
 
   main{
@@ -58,6 +58,7 @@
     background-color: #f9f9f9;
     display: grid;
     gap: 1rem;
+    font-family: 'Lora', serif; /* Apply Lora to all form text */
   }
   
   fieldset {
@@ -71,7 +72,7 @@
     font-weight: bold;
     color: var(--primary-dark-blue);
     padding: 0 0.5rem;
-    /* font-family: 'Lora', 'Oswald', sans-serif; */
+    font-family: 'Oswald', sans-serif;
   }
   
   label {
