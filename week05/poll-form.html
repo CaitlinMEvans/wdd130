@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Form - User Poll | WDD 130</title>
+  <link rel="stylesheet" href="styles/form.css"> 
+  <!-- GOOGLE FONTS PRECONNECT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- GOOGLE FONTS USED -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>HTML Form - User Poll</h1>
+  </header>
+  <main>
+    <h2>Poll Purpose</h2>
+    <p>This form is designed to gather some basic feedback and insights from our users in a straightforward, welcoming way. The “Contact Information” section asks for the user’s name and email, which helps us stay connected and personalize our communication.</p>
+    <p>In the “Questions” section, we get to learn a little more about our users’ preferences and experiences. We’re curious about which internet browser they prefer and whether they have any household pets—just some light-hearted questions to make it fun and engaging. Additionally, we’ve included a section where users can list the places they’ve lived, which adds a touch of personalization and encourages users to share a bit about their background.</p>
+    <p>At the end of the form, there’s a "Submit Poll" button, making it simple for users to send in their responses. This form aims to create an inviting, user-friendly experience that feels more like a conversation than a survey. It’s a way for us to get to know our users better and tailor our approach based on what matters to them.</p>
+    
+    <form>
+      <fieldset>
+        <legend>Contact Information</legend>
+        
+        <div class="form-item column2">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname">
+          </div>
+        
+        <div class="form-item column2">
+          <label for="useremail">Email:</label>
+          <input type="email" id="useremail" name="useremail" placeholder="Enter your email">
+        </div>
+      </fieldset>
+      
+      <fieldset>
+        <legend>Questions</legend>
+        
+        <div class="form-item column1">
+          <label for="browser">What is your favorite internet browser?</label>
+          <select id="browser" name="browser">
+            <option value="chrome">Chrome</option>
+            <option value="firefox">Firefox</option>
+            <option value="safari">Safari</option>
+            <option value="edge">Edge</option>
+            <option value="brave">Brave</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <div class="form-item column1">
+          <label for="pet">Do you have a household pet?</label>
+          <input type="checkbox" id="pet" name="pet">
+        </div>
+        
+        <div class="form-item">
+          <label for="feedback">List the places you have lived:</label>
+          <textarea id="feedback" name="feedback" rows="4" placeholder="Stillwater Florida, Amsterdam Netherlands, Tibuktu Mali"></textarea>
+        </div>
+      </fieldset>
+      
+      <button type="submit">Submit Poll</button>
+    </form>
+  </main>
+  <footer>
+    <p>©2024 | HTML Form - User Poll Activity | Caitlin Evans</p>
+  </footer>
+</body>
+</html>
