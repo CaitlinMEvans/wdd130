@@ -242,7 +242,7 @@ header {
 
 /* Help Section */
 .help-today {
-    background-color: var(--secondary-dark-green);
+    background-color: var(--primary-dark-blue);
     color: white;
     text-align: center;
     padding: 2rem 0;
@@ -468,7 +468,7 @@ button[type="submit"]:hover {
     text-align: center;
     padding: 1.5rem;
     border-radius: 8px;
-    background-color: white;
+    background-color: var(--primary-green);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
@@ -486,7 +486,7 @@ button[type="submit"]:hover {
 
 .profile-grid figcaption {
     font-family: 'Lora', serif;
-    color: var(--secondary-dark-green);
+    color: white;
     font-size: 1rem;
     line-height: 1.4;
 }
@@ -494,13 +494,13 @@ button[type="submit"]:hover {
 .profile-grid figcaption strong {
     display: block;
     font-size: 1.1rem;
-    color: var(--primary-dark-blue);
+    color: white;
     margin-bottom: 0.3rem;
 }
 
 .profile-grid figcaption span {
     font-size: 0.9rem;
-    color: var(--secondary-dark-green);
+    color: white;
     opacity: 0.8;
 }
 
