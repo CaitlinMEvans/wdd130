@@ -75,6 +75,10 @@ header {
 }
 
 /* CLASSES */ 
+/* ---------------------------- */
+/* About Page Styles  */
+/* ---------------------------- */
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -212,6 +216,249 @@ header {
     color: var(--secondary-dark-green);
     font-style: italic;
 } */
+
+/* ---------------------------- */
+/* Contact US Page Styles */
+/* ---------------------------- */
+
+/* Reach Our Team Section */
+.reach-team {
+    position: relative;
+    background-image: url("../images/down_rocks.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.reach-team .background-overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for readability */
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Help  Section */
+.help-today {
+    background-color: var(--secondary-dark-green);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.help-today h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.help-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.help-card {
+    background-color: white;
+    color: var(--primary-dark-blue);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    text-align: center;
+}
+
+.help-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.help-card p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.help-button {
+    background-color: var(--primary-yellow);
+    color: var(--primary-dark-blue);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.help-button:hover {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+
+
+/* Form Styling */
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: grid;
+    gap: 1rem;
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    color: var(--primary-dark-blue);
+    padding: 0 0.5rem;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    font-weight: bold;
+    color: var(--secondary-dark-green);
+    margin: 0.5rem 0 0.25rem;
+}
+
+/* Input and Textarea Styling */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+}
+
+/* Placeholder Text Styling */
+input::placeholder,
+textarea::placeholder {
+    color: var(--text-color);
+    opacity: 0.7;
+    font-family: 'Lora', serif;
+}
+
+/* Button Styling */
+button[type="submit"] {
+    background-color: var(--primary-dark-blue);
+    color: var(--primary-yellow);
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+/* Employee Profiles Section */
+.employee-profiles {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.employee-profiles h2 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary-dark-blue);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    max-width: 1000px; /* Wider to accommodate five profiles */
+    margin: 0 auto;
+}
+
+.profile-grid figure {
+    text-align: center;
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-grid img {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.profile-grid figcaption {
+    font-family: 'Lora', serif;
+    color: var(--secondary-dark-green);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Contact Information and Map */
+.contact-info {
+    background-color: var(--background-color);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.contact-info div {
+    background-color: #fff;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.contact-info h3 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary-dark-blue);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.map {
+    width: 100%;
+    height: 200px;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* ---------------------------- */
+/* Footer Styles */
+/* ---------------------------- */
+
 
 footer {
     display: flex;

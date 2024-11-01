@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Rivers of Eden Rafting Adventure Co. Project for the contact us page">
+    <meta name="author" content="Caitlin Evans">
+    <title>CONTACT US | Rivers of Eden Rafting Adventure Co.</title>
+    <link rel="stylesheet" href="styles/rafting.css">
+    <!-- GOOGLE FONTS PRECONNECT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- GOOGLE FONTS USED -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img id="logo-main" src="images/logo_main.svg" alt="Rivers of Eden Main Logo">
+            <nav class="main-nav" aria-label="Main Navigation">
+                <a href="/wwr/index.html" aria-label="Visit Rafting Website">Home</a>
+                <a href="/wwr/about.html" aria-label="Visit Rafting Website">About Us</a>
+                <a href="/wwr/trips.html" aria-label="Visit Rafting Website">Trips</a>
+                <a href="/wwr/contact.html" aria-label="Visit Rafting Website">Contact Us</a>
+            </nav> 
+        </div>
+    </header>    
+    <main>
+        <!-- <img src="images/down_rocks.jpg" alt="Rafters navigating rocky path"> -->
+        <section class="reach-team">
+            <div class="background-overlay">
+                <h2>Reach Our Team</h2>
+                <p>We love questions and feedback—and we're always happy to help! Here are some ways to contact us.</p>
+            </div>
+        </section>
+        
+        
+        <section class="help-today">
+            <h2>How can we help you today?</h2>
+            <div class="help-cards">
+                <article class="help-card">
+                    <h3>Book with Sales</h3>
+                    <p>We are waiting to help you book your next dream adventure!</p>
+                    <button class="help-button">801.123.5678</button>
+                </article>
+                <article class="help-card">
+                    <h3>Contact Customer Support</h3>
+                    <p>Chat with our Support team to get easy help for all your needs.</p>
+                    <button class="help-button">SUPPORT CHAT</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-details">
+            <div class="contact-form">
+                <h3>Need something else?</h3>
+                <p>Use our contact form and we will reach out to you directly within 24 business hours.</p>
+                <form onsubmit="event.preventDefault(); alert('The form is for demonstration and would have submitted successfully.');">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Your name">
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address">
+                    
+                    <label for="purpose">What can we help with?</label>
+                    <div class="radio-options">
+                        <label><input type="radio" name="purpose" value="general-inquiry"> General Inquiry</label>
+                        <label><input type="radio" name="purpose" value="reservation-question"> Reservation Question</label>
+                        <label><input type="radio" name="purpose" value="website-suggestion"> Website Suggestion</label>
+                        <label><input type="radio" name="purpose" value="website-suggestion"> Other</label>
+                    </div>
+
+                    <label for="message">Leave us a message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+
+                    <label><input type="checkbox" name="subscribe"> Would you like to be subscribed to the newsletter?</label>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <div class="headquarters">
+                <h3>Headquarters</h3>
+                <p>Multi-day trip reservations and general questions</p>
+                <address>
+                    7258 S Racquet Club Dr<br>
+                    Salt Lake City, UT 84121<br>
+                    M-F: 8am - 5pm Mountain Time<br>
+                    <strong>Main Line:</strong> 801.123.1234 <br>
+                    <strong>Toll-Free:</strong> 800.123.1234<br>
+                    <a href="mailto:Support@Rivers-of-Eden.com">Support@Rivers-of-Eden.com</a>
+                </address>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.495882839731!2d-111.82952918468285!3d40.596982779347816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874d9b7e8a9d17d1%3A0xafeef33bb5f1ff1a!2s7258%20Racquet%20Club%20Dr%2C%20Cottonwood%20Heights%2C%20UT%2084121%2C%20USA!5e0!3m2!1sen!2sus!4v1615661231533!5m2!1sen!2sus" width="100%" height="200" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="employee-profiles">
+            <h2>Meet Our Team</h2>
+            <div class="profile-grid">
+                <figure>
+                    <img src="images/placeholder.jpg" alt="Photo of Alex Jordan">
+                    <figcaption>
+                        <strong>Alex Jordan</strong><br>
+                        Certified Rafting Professional
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/placeholder.jpg" alt="Photo of Sarah Lee">
+                    <figcaption>
+                        <strong>Sarah Lee</strong><br>
+                        Travel Guide
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/placeholder.jpg" alt="Photo of Chris Patel">
+                    <figcaption>
+                        <strong>Chris Patel</strong><br>
+                        Customer Support Specialist
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/placeholder.jpg" alt="Photo of Maria Chen">
+                    <figcaption>
+                        <strong>Maria Chen</strong><br>
+                        Senior Sales Representative
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/placeholder.jpg" alt="Photo of Ben Martinez">
+                    <figcaption>
+                        <strong>Ben Martinez</strong><br>
+                        Travel Guide
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Rivers of Eden Rafting Adventure Co.</p>
+        <nav class="social-links" aria-label="Footer Social Media Navigation">
+            <a href="https://facebook.com" target="_blank" aria-label="Visit our Facebook page">
+                <img src="images/icon_facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://twitter.com" target="_blank" aria-label="Visit our Twitter page">
+                <img src="images/icon-x.svg" alt="Twitter">
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Visit our Instagram page">
+                <img src="images/icon_instagram.svg" alt="Instagram">
+            </a>
+        </nav> 
+    </footer>
+</body>
+</html>
