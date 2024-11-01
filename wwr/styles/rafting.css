@@ -13,7 +13,7 @@ h1, h2, h3 {
 }
 
 p {
-    color: var(--secondary-dark-green);
+    /* color: var(--secondary-dark-green); */
     font-size: 1rem;
     line-height: 1.6;
 } 
@@ -212,18 +212,32 @@ header {
     font-style: italic;
 } */
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-dark-blue);
+}
 
-
-
-
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
 
 .social-links {
-    margin: 10px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
+
 .social-links a {
     text-decoration: none;
 }
+
 .social-links img {
-    max-width: 40px;
+    max-width: 30px; /* Adjust the icon size */
 }
 
