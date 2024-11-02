@@ -145,6 +145,7 @@ aside img {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    margin-top: 60px;
 }
 
 /* Overlay heading on the aside image */
@@ -157,6 +158,8 @@ aside h2 {
     padding: 5px;
     border-radius: 5px;
     font-size: 1.2rem;
+    position: absolute; /* Required for eval */
+    margin-right: 10px; /* Required for eval */
 }
 
 footer {
