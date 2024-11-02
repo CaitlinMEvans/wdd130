@@ -235,7 +235,7 @@ header {
 
 .reach-team .background-overlay {
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 8px;
     max-width: 600px;
     margin: 0 auto;
@@ -246,7 +246,7 @@ header {
     background-color: var(--primary-dark-blue);
     color: white;
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .help-today h2 {
