@@ -56,7 +56,7 @@ nav a {
 
 nav a:hover {
     background-color: var(--orange);
-    color: white;
+    color: black;
 }
 
 .grid {
