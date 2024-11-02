@@ -69,6 +69,10 @@ main {
     max-width: 840px;
 }
 
+main img{
+    float: right;
+}
+
 #profile-img {
     margin: 40px 0;
 }
