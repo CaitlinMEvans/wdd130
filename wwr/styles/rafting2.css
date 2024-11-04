@@ -161,7 +161,7 @@ header {
     background: white;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
     width: 375px;
     text-align: center;
     transition: transform 0.3s ease;
@@ -213,4 +213,104 @@ header {
 .info-button:hover {
     background-color: var(--primary-green);
     color: white;
+}
+/* Popular Adventures Section */
+.popular-adventures {
+    text-align: center;
+    background-color: var(--primary-dark-blue);
+    padding: 3rem 1rem;
+}
+
+.popular-adventures h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.popular-adventures h3 {
+    font-size: 1.5rem;
+    color: var(--primary-yellow);
+    margin-bottom: 2rem;
+}
+
+.adventure-cards {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.adventure-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #023047;
+    transition: transform 0.3s;
+}
+
+.adventure-card:hover {
+    transform: translateY(-5px);
+}
+
+.adventure-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.adventure-content {
+    padding: 2rem;
+    text-align: left;
+}
+
+.adventure-content h4 {
+    font-size: 1.75rem;
+    color: black;
+    margin: 1.25rem 0;
+}
+
+.adventure-content .location {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color:#023047;
+    color: white;
+    padding: .25em;
+    display: block;
+    margin: 0.25rem 0;
+    text-align: center;
+}
+
+.adventure-content p {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    color: black;
+}
+
+.price { 
+    font-size: 1.25rem;
+    color: var(--primary-green); 
+    font-weight: bold;
+    margin: 1em 0;
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-yellow);
+    color: black;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.learn-more:hover {
+    background-color: var(--primary-green);
+    color: white;
+    text-decoration: underline;
 }
