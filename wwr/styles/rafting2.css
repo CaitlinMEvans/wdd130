@@ -7,8 +7,16 @@
     --secondary-orange: #FB8500;
     --secondary-dark-green: #283618;
     --overlay-bg: rgba(0, 0, 0, 0.7);
-}
 
+    --gradient-blue: linear-gradient(to bottom, #219EBC, #023047); /* Light blue to dark blue (top to bottom) */
+    --gradient-green: linear-gradient(to bottom, #606C38, #283618); /* Light green to dark green (top to bottom) */
+    --gradient-blue-reverse: linear-gradient(to bottom, #023047, #219EBC); /* Dark blue to light blue (top to bottom) */
+    --gradient-green-reverse: linear-gradient(to bottom, #283618, #606C38); /* Dark green to light green (top to bottom) */
+    
+    /* Gradients with transparency */
+    --gradient-overlay-blue: linear-gradient(to bottom, rgba(2, 48, 71, 0.6), rgba(2, 48, 71, 1)); /* Blue with transparency gradient (top to bottom) */
+    --gradient-overlay-dark: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(2, 48, 71, 1)); /* Black to blue with transparency (top to bottom) */
+}
 /* Reset */
 * {
     margin: 0;
@@ -54,10 +62,16 @@ header {
 }
 
 .cta-button {
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.2rem;
+    /* border-radius: 15px; */
     background-color: var(--primary-yellow);
-    color: var(--primary-dark-blue);
+    color: black;
     border-radius: 4px;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-dark-blue);
+    color: white
 }
 
 /* Hero Section */
@@ -78,9 +92,7 @@ header {
     position: absolute;
     bottom: 2em;
     width: 100%;
-    /* background: linear-gradient(rgba(2, 48, 71, 0.6), rgba(2, 48, 71, 1));  */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(2, 48, 71, 1)); 
-    /* background-color: var(--overlay-bg); */
+    background-color: var(--overlay-bg);
     color: white;
     display: flex;
     flex-direction: column;
@@ -126,13 +138,13 @@ header {
 /* Info Section */
 .info-section {
     padding: 5rem 2rem 2rem;
-    background-color: #E0E7EE; /* Slightly lighter background */
+    background: var(--gradient-blue);
     text-align: center;
 }
 
 .info-section h2 {
     font-size: 2rem;
-    color: var(--primary-dark-blue);
+    color: black;
     margin-bottom: 3rem;
     font-family: 'Oswald', sans-serif;
 }
@@ -140,9 +152,8 @@ header {
 .info-cards {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 5rem;
     flex-wrap: wrap;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -151,13 +162,13 @@ header {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 375px;
     text-align: center;
     transition: transform 0.3s ease;
 }
 
 .info-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
 }
 
 .info-icon img {
@@ -166,7 +177,8 @@ header {
     margin-bottom: 1rem;
     padding: 0.5rem;
     background-color: var(--primary-yellow);
-    border-radius: 50%;
+    /* filter: brightness(0) invert(1);  */
+    border-radius: 10px;
 }
 
 .info-card h3 {
@@ -181,6 +193,10 @@ header {
     line-height: 1.6;
     color: var(--secondary-dark-green);
     margin-bottom: 1rem;
+}
+
+.info-card p:first-of-type {
+    font-weight: bold;
 }
 
 .info-button {
