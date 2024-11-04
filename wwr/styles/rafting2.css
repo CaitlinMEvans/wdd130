@@ -100,7 +100,7 @@ header {
 .hero-overlay p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
-    max-width: 800px;
+    max-width: 75%;
 }
 
 
@@ -108,12 +108,13 @@ header {
     padding: 1.25em;
     background-color: var(--primary-yellow);
     color: black;
+    font-size: 1.25em;
     font-weight: bold;
     text-decoration: none;
     border-radius: 40px;
     transform: translateY(50%);
     position: absolute;
-    top: 10em;
+    top: 8.5em;
 }
 
 .hero-cta-button:hover {
