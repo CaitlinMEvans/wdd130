@@ -100,7 +100,7 @@ header {
     /* justify-content: center; */
     text-align: center;
     padding: 2rem;
-    border-bottom: solid 1px white;
+    /* border-bottom: solid 1px white; */
 }
 
 .hero-overlay h1 {
@@ -213,7 +213,71 @@ header {
 .info-button:hover {
     background-color: var(--primary-green);
     color: white;
+    text-decoration: underline;
 }
+
+/* BLOG Highlight Section */
+.blog-highlight {
+    position: relative;
+    background-image: url('../images/happy_woman.jpg'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 1rem;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 550px; /* Adjust height as needed */
+}
+
+.blog-overlay {
+    background: var(--overlay-bg);
+    padding: 3rem;
+    border-radius: 8px;
+    /* width: 90%; */
+    /* max-width: 800px; */
+}
+
+.blog-highlight h2 {
+    font-size: 1.75rem;
+    color: var(--primary-yellow);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    text-transform: capitalize;
+}
+
+.blog-highlight h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.blog-highlight p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.blog-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    color: var(--primary-dark-blue);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.blog-button:hover {
+    background-color: var(--primary-yellow);
+    color: var(--primary-dark-blue);
+}
+ 
+
 /* Popular Adventures Section */
 .popular-adventures {
     text-align: center;
@@ -313,4 +377,79 @@ header {
     background-color: var(--primary-green);
     color: white;
     text-decoration: underline;
+}
+
+/* ROOTS SECTION */
+.roots-section {
+    text-align: center;
+    /* padding: 2rem 1rem; */
+    background-color: lightgray;
+}
+
+.roots-heading {
+background-color: black;
+padding: 2em 0;
+}
+
+.roots-heading h2 {
+    font-size: 2rem;
+    color: white;
+    margin: 1em 0;
+}
+
+.roots-heading p {
+    font-size: 1.2rem;
+    color: white;
+    margin: 2rem 0;
+}
+
+.roots-image img {
+    width: 100%;
+    height: 100%;
+    margin-top: -8em;
+}
+
+.roots-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.item1 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.item2, .item4 {
+    grid-column: span 1;
+    grid-row: 2 / 3;
+}
+
+.item3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.item5 {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+.root-item {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-number {
+    display: block;
+    background: var(--primary-dark-blue);
+    color: white;
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin: 0 auto;
 }
