@@ -140,6 +140,7 @@ header {
     padding: 5rem 2rem 2rem;
     background: var(--gradient-blue);
     text-align: center;
+    padding-bottom: 4em;
 }
 
 .info-section h2 {
@@ -382,74 +383,78 @@ header {
 /* ROOTS SECTION */
 .roots-section {
     text-align: center;
-    /* padding: 2rem 1rem; */
     background-color: lightgray;
+    padding: 3rem 0;
 }
 
 .roots-heading {
-background-color: black;
-padding: 2em 0;
+    background-color: black;
+    padding: 2rem 0;
+    color: white;
 }
 
 .roots-heading h2 {
     font-size: 2rem;
     color: white;
-    margin: 1em 0;
+    margin: 0;
 }
 
 .roots-heading p {
     font-size: 1.2rem;
     color: white;
-    margin: 2rem 0;
+    margin-top: 1rem;
 }
 
 .roots-image img {
     width: 100%;
-    height: 100%;
-    margin-top: -8em;
+    height: auto;
+    margin-top: -3rem;
 }
 
 .roots-items {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 2rem;
+    padding: 0 10%;
 }
 
 .item1 {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+    grid-area: 1 / 2 / 2 / 3; /* Center top */
 }
 
-.item2, .item4 {
-    grid-column: span 1;
-    grid-row: 2 / 3;
+.item2 {
+    grid-area: 2 / 1 / 3 / 2; /* Left middle */
 }
 
 .item3 {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    grid-area: 2 / 2 / 3 / 3; /* Center middle */
+}
+
+.item4 {
+    grid-area: 2 / 3 / 3 / 4; /* Right middle */
 }
 
 .item5 {
-    grid-column: 3 / 4;
-    grid-row: 3 / 4;
+    grid-area: 3 / 2 / 4 / 3; /* Center bottom */
 }
 
 .root-item {
     background: white;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 1.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .item-number {
-    display: block;
+    display: inline-block;
     background: var(--primary-dark-blue);
     color: white;
     font-size: 1.5rem;
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    margin: 0 auto;
+    line-height: 2rem;
+    margin-bottom: 1rem;
 }
