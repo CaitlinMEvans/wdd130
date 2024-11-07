@@ -421,7 +421,7 @@ form button[type="submit"] {
 }
 
 form button[type="submit"]:hover {
-    background-color: var(--primary-green);
+    background-color: var(--secondary-dark-green);
     color: white;
 }
 
