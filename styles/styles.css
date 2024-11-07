@@ -16,7 +16,7 @@
     --img-padding: 3px;
     --box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     --paragraph-padding: 10px;
-    --box-bg-color: var(--green);
+    --box-bg-color: var(--dark-green);
     --box-text-color: white;
 }
 
@@ -119,8 +119,8 @@ p {
     margin: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1rem;
-    background-color: var(--box-bg-color);
     color: var(--box-text-color);
+    background-color: var(--dark-green);
 }
 
 .box1 ul {
@@ -137,15 +137,16 @@ p {
 }
 
 .box1 a:hover {
-    color: white;
-    background-color: var(--dark-green);
+    background-color: var(--orange);
+    color: black;
+    padding: var(--nav-padding);
     padding: 10px;
 }
 
 /* Aside section styling */
 aside {
     position: relative;
-    background-color: var(--box-bg-color);
+    background-color: var(--dark-blue);
     padding: 1rem;
     border-radius: 8px;
     color: var(--box-text-color);
@@ -167,7 +168,7 @@ aside h2 {
     text-align: center;
     top: 10px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 15px;
     border-radius: 5px;
     font-size: 1.2rem;
