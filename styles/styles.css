@@ -9,7 +9,7 @@
     --main-bg-color: var(--dark-blue);
     --main-text-color: var(--dark-blue);
     --link-text-color: var(--yellow);
-    --nav-padding: 10px;
+    --nav-padding: 15px;
     --link-padding: 15px;
     --img-width: 150px;
     --img-border: 2px solid var(--dark-green);
@@ -29,7 +29,7 @@
 
 /* Center header, main, and footer */
 header, .grid, footer {
-    max-width: 840px;
+    max-width: 1250px;
     margin: 0 auto;
 }
 
@@ -52,11 +52,13 @@ nav a {
     padding: var(--link-padding);
     text-decoration: none;
     transition: color 0.3s, background-color 0.3s;
+    font-size: 1.5em;
 }
 
 nav a:hover {
     background-color: var(--orange);
     color: black;
+    padding: var(--nav-padding);
 }
 
 .grid {
@@ -74,7 +76,8 @@ main img{
 }
 
 #profile-img {
-    margin: 40px 0;
+    margin: 2em 1em;
+    width: 200px;
 }
 
 h1 {
@@ -94,6 +97,7 @@ img {
 
 p {
     padding: var(--paragraph-padding);
+    margin: 2em 1em;
 }
 
 /* Profile image floating to the right */
@@ -152,10 +156,10 @@ aside img {
 aside h2 {
     text-align: center;
     top: 10px;
-    left: 10px;
+    /* left: 10px; */
     color: white;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 5px;
+    padding: 15px;
     border-radius: 5px;
     font-size: 1.2rem;
     position: absolute; /* Required for eval */
