@@ -292,7 +292,7 @@ header {
 }
 
 .help-button:hover {
-    background-color: var(--primary-green);
+    background-color: var(--secondary-dark-green);
     color: white;
 }
 
