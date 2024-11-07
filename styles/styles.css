@@ -61,6 +61,7 @@ nav a:hover {
     padding: var(--nav-padding);
 }
 
+/* Grid Layout for Main and Aside */
 .grid {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -69,9 +70,11 @@ nav a:hover {
 
 main {
     max-width: 840px;
+    grid-column: 2 / 3;
+    order: 2;
 }
 
-main img{
+main img {
     float: right;
 }
 
@@ -107,7 +110,7 @@ p {
 }
 
 /* Class Selectors */
-.box{
+.box {
     /* satisfy requirements */
     text-decoration: none;
 }
@@ -127,7 +130,7 @@ p {
 }
 
 .box1 a {
-    color: var(--white);
+    color: var(--box-text-color);
     text-decoration: none;
     transition: color 0.3s, background-color 0.3s;
     padding: 10px;
@@ -142,6 +145,13 @@ p {
 /* Aside section styling */
 aside {
     position: relative;
+    background-color: var(--box-bg-color);
+    padding: 1rem;
+    border-radius: 8px;
+    color: var(--box-text-color);
+    box-shadow: var(--box-shadow);
+    grid-column: 1 / 2; 
+    order: 1;
 }
 
 /* Styling for the image inside the aside */
@@ -156,16 +166,42 @@ aside img {
 aside h2 {
     text-align: center;
     top: 10px;
-    /* left: 10px; */
     color: white;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 15px;
     border-radius: 5px;
     font-size: 1.2rem;
-    position: absolute; /* Required for eval */
-    margin-right: 10px; /* Required for eval */
+    position: absolute;
+    margin-right: 10px;
 }
 
+/* Responsive Layout */
+/* @media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    main, aside {
+        grid-column: 1 / -1;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 1.2em; 
+        padding: 10px;
+    }
+} */
+
+/* Footer */
 footer {
     margin-top: 15px;
     border-top: 1px solid #000;
