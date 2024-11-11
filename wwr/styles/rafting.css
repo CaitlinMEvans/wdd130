@@ -49,11 +49,12 @@ p {
     line-height: 1.6;
 }
 
-.emphasis{
+.emphasis {
     font-family: "Mr Dafoe", serif;
-    font-size: 2.2em;
+    font-size: 2em;
     color: #219EBC;
-
+    letter-spacing: 0.10em;
+    padding-right: .20em;
 }
 
 body {
@@ -652,6 +653,7 @@ footer .help-button a:hover{
     gap: 1rem;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 .newsletter-form input[type="text"],
