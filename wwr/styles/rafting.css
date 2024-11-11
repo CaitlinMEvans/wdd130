@@ -385,9 +385,9 @@ footer .help-button a:hover{
     margin-bottom: 2rem;
 }
 
-#adventure{
+.adventure{
     background-color: lightgray;
-    padding-top: 1em;
+    padding: 1em 0;
 }
 
 .adventure-cards {
