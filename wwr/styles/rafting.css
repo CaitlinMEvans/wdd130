@@ -524,7 +524,7 @@ footer .help-button a:hover{
 
 .roots-items {
     position: absolute;
-    top: 15em;
+    top: 18em;
     left: 0;
     right: 0;
     display: grid;
@@ -695,6 +695,10 @@ padding: 1rem;
     bottom: -2em;
     position: absolute;
 }
+.about{
+    margin-bottom: 3.5em;
+}
+
 
 /* Overlapping Effect for Testimonials Section */
 .testimonials-section {
