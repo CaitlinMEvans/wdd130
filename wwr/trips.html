@@ -424,72 +424,84 @@
     <!-- filtering JS -->
     <script>
     // Adventure Cards Filtering
-    function filterCards() {
-        const activityFilter = document.getElementById("activity").value;
-        const locationFilter = document.getElementById("location").value;
-        const timeframeFilter = document.getElementById("timeframe").value;
-        const cards = document.querySelectorAll(".adventure-card");
+// Function to filter Adventure and Add-On Cards
+function filterContent() {
+    // Get filter values
+    const activityFilter = document.getElementById("activity").value;
+    const locationFilter = document.getElementById("location").value;
+    const timeframeFilter = document.getElementById("timeframe").value;
+    const addonFilter = document.getElementById("addon-filter").value;
 
-        cards.forEach(card => {
-            const activity = card.getAttribute("data-activity");
-            const location = card.getAttribute("data-location");
-            const timeframe = card.getAttribute("data-timeframe");
+    // Filter Adventure Cards
+    const adventureCards = document.querySelectorAll(".adventure-card");
+    adventureCards.forEach(card => {
+        const activity = card.getAttribute("data-activity");
+        const location = card.getAttribute("data-location");
+        const timeframe = card.getAttribute("data-timeframe");
 
-            if (
-                (activityFilter === "all" || activity === activityFilter) &&
-                (locationFilter === "all" || location === locationFilter) &&
-                (timeframeFilter === "all" || timeframe === timeframeFilter)
-            ) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
-        });
-    }
+        // Show or hide adventure cards based on filter criteria
+        if (
+            (activityFilter === "all" || activity === activityFilter) &&
+            (locationFilter === "all" || location === locationFilter) &&
+            (timeframeFilter === "all" || timeframe === timeframeFilter)
+        ) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
 
-    // Add-On Cards Filtering
-    function filterAddons() {
-        const addonFilter = document.getElementById("addon-filter").value;
-        const addonCards = document.querySelectorAll(".addon-card");
+    // Filter Add-On Cards
+    const addonCards = document.querySelectorAll(".addon-card");
+    addonCards.forEach(card => {
+        const addon = card.getAttribute("data-addon");
 
-        addonCards.forEach(card => {
-            const addon = card.getAttribute("data-addon");
+        // Show or hide add-on cards based on add-on filter criteria
+        if (addonFilter === "all" || addon === addonFilter) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
 
-            if (addonFilter === "all" || addon === addonFilter) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
-        });
-    }
+// Function to update the itinerary summary based on selections in the itinerary form
+function planItinerary() {
+    // Collect selected activities
+    const selectedActivities = Array.from(document.querySelectorAll('input[name="activity"]:checked'))
+        .map((checkbox) => checkbox.value)
+        .join(', ');
 
-    function planItinerary() {
-        // Collect selected activities
-        const selectedActivities = Array.from(document.querySelectorAll('input[name="activity"]:checked'))
-            .map((checkbox) => checkbox.value)
-            .join(', ');
+    // Collect selected add-ons
+    const selectedAddOns = Array.from(document.querySelectorAll('input[name="addons"]:checked'))
+        .map((checkbox) => checkbox.value)
+        .join(', ');
 
-        // Collect selected add-ons
-        const selectedAddOns = Array.from(document.querySelectorAll('input[name="addons"]:checked'))
-            .map((checkbox) => checkbox.value)
-            .join(', ');
+    // Collect other form selections
+    const location = document.getElementById("itinerary-location").value;
+    const timeFrame = document.getElementById("itinerary-timeframe").value;
+    const tripDate = document.getElementById("trip-date").value;
 
-        // Collect other form selections
-        const location = document.getElementById("itinerary-location").value;
-        const timeFrame = document.getElementById("itinerary-timeframe").value;
-        const tripDate = document.getElementById("trip-date").value;
+    // Display summary
+    const summaryText = `
+        Activities: ${selectedActivities || 'None selected'}
+        Add-Ons: ${selectedAddOns || 'None selected'}
+        Location: ${location}
+        Time Frame: ${timeFrame}
+        Preferred Date: ${tripDate || 'Not specified'}
+    `;
 
-        // Display summary
-        const summaryText = `
-            Activities: ${selectedActivities || 'None selected'}
-            Add-Ons: ${selectedAddOns || 'None selected'}
-            Location: ${location}
-            Time Frame: ${timeFrame}
-            Preferred Date: ${tripDate || 'Not specified'}
-        `;
+    document.getElementById("summary-text").innerText = summaryText;
+}
 
-        document.getElementById("summary-text").innerText = summaryText;
-    }
+// Add event listeners for each filter dropdown to trigger filtering when changed
+document.getElementById("activity").addEventListener("change", filterContent);
+document.getElementById("location").addEventListener("change", filterContent);
+document.getElementById("timeframe").addEventListener("change", filterContent);
+document.getElementById("addon-filter").addEventListener("change", filterContent);
+
+// Add event listener for the "Plan My Trip" button in the itinerary section
+document.querySelector(".itinerary-submit button").addEventListener("click", planItinerary);
 </script>
 </body>
 </html>
