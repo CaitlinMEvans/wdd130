@@ -147,7 +147,7 @@
 
     <!-- Adventure Cards that can be filtered -->
     <div class="adventure">
-        <section class="adventure-cards">
+        <section id="fourgrid" class="adventure-cards">
             <div class="adventure-card" data-activity="rafting" data-location="montana" data-timeframe="day-trip">
                 <h3>Rafting in Montana</h3>
                 <p><strong>Activity:</strong> Rafting</p>
@@ -174,8 +174,7 @@
                 <p>Embark on a multi-week horseback adventure across California's wilderness.</p>
                 <a href="#" class="learn-more">Learn More</a>
             </div>
-        </section>
-        <section class="adventure-cards">
+
             <div class="adventure-card" data-activity="rafting" data-location="montana" data-timeframe="day-trip">
                 <h3>Rafting in Montana</h3>
                 <p><strong>Activity:</strong> Rafting</p>
@@ -202,8 +201,7 @@
                 <p>Embark on a multi-week horseback adventure across California's wilderness.</p>
                 <a href="#" class="learn-more">Learn More</a>
             </div>
-        </section>    
-        <section class="adventure-cards">
+
             <div class="adventure-card" data-activity="kayaking" data-location="wyoming" data-timeframe="overnighter">
                 <h3>Kayaking in Wyoming</h3>
                 <p><strong>Activity:</strong> Kayaking</p>
@@ -230,8 +228,7 @@
                 <p>Fly high over Colorado’s canyons in this thrilling one-day zipline experience.</p>
                 <a href="#" class="learn-more">Learn More</a>
             </div>
-        </section>
-        <section class="adventure-cards">
+
             <div class="adventure-card" data-activity="relaxing float" data-location="idaho" data-timeframe="weekender">
                 <h3>Relaxing Float in Idaho</h3>
                 <p><strong>Activity:</strong> Relaxing Float</p>
@@ -313,7 +310,109 @@
         </div>
         </section>
     </div>
-
+    <section class="trip-summary">
+        <h2>Available Trips Summary</h2>
+        <p>A comprehensive overview of all available trips, including activity details, location, duration, adventure level, age requirements, price, and add-ons.</p>
+        
+        <table class="trip-summary-table">
+            <thead>
+                <tr>
+                    <th>Activity</th>
+                    <th>Location</th>
+                    <th>Duration</th>
+                    <th>Adventure Level</th>
+                    <th>Minimum Age</th>
+                    <th>Price</th>
+                    <th>Add-Ons</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample Data Rows -->
+                <tr>
+                    <td>Rafting</td>
+                    <td>Oregon</td>
+                    <td>1 Day</td>
+                    <td>Easy to Moderate</td>
+                    <td>8</td>
+                    <td>$165</td>
+                    <td>Inclusive Meals, Wine Tasting</td>
+                </tr>
+                <tr>
+                    <td>Rafting</td>
+                    <td>Utah</td>
+                    <td>3 Days</td>
+                    <td>Moderate</td>
+                    <td>12</td>
+                    <td>$550</td>
+                    <td>Professional Photographer, Star Gazing</td>
+                </tr>
+                <tr>
+                    <td>Rafting</td>
+                    <td>Montana</td>
+                    <td>5 Days</td>
+                    <td>Moderate</td>
+                    <td>10</td>
+                    <td>$825</td>
+                    <td>Yoga & Meditation, Nature Photography</td>
+                </tr>
+                <tr>
+                    <td>Hiking</td>
+                    <td>Utah</td>
+                    <td>2 Days</td>
+                    <td>Moderate</td>
+                    <td>10</td>
+                    <td>$300</td>
+                    <td>Yoga & Meditation, Wellness and Spa</td>
+                </tr>
+                <tr>
+                    <td>Horseback Riding</td>
+                    <td>California</td>
+                    <td>Multi-Week Expedition</td>
+                    <td>Challenging</td>
+                    <td>14</td>
+                    <td>$1500</td>
+                    <td>Inclusive Meals, Professional Photographer, Specialty Gear Rental, Yoga & Meditation, Wellness and Spa, Fishing Gear Rental, Star Gazing</td>
+                </tr>
+                <tr>
+                    <td>Fishing</td>
+                    <td>Oregon</td>
+                    <td>5 Days</td>
+                    <td>Easy</td>
+                    <td>10</td>
+                    <td>$700</td>
+                    <td>Fishing Gear Rental, Star Gazing</td>
+                </tr>
+                <tr>
+                    <td>Kayaking</td>
+                    <td>Wyoming</td>
+                    <td>Overnighter</td>
+                    <td>Moderate</td>
+                    <td>12</td>
+                    <td>$250</td>
+                    <td>Professional Photographer</td>
+                </tr>
+                <tr>
+                    <td>Ziplining</td>
+                    <td>Colorado</td>
+                    <td>1 Day</td>
+                    <td>Moderate to Challenging</td>
+                    <td>14</td>
+                    <td>$180</td>
+                    <td>Professional Photographer</td>
+                </tr>
+                <tr>
+                    <td>Relaxing Float</td>
+                    <td>Idaho</td>
+                    <td>Weekend</td>
+                    <td>Easy</td>
+                    <td>6</td>
+                    <td>$200</td>
+                    <td>Wellness and Spa, Yoga & Meditation</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
     <!-- Newsletter section so that it is breaking up sections  -->
         <!-- Newsletter Section -->
         <section class="newsletter-section">
@@ -393,11 +492,11 @@
                 </div>
             </div>
 
-            <div>
-                <!-- Summary of Selections -->
+            <!-- Summary of Selections -->
+            <!-- <div>
                 <label>Your Itinerary Summary:</label>
                 <p id="summary-text">Choose options to see your custom itinerary details here.</p>
-            </div>
+            </div> -->
 
             <!-- Submit Button Centered -->
             <div class="itinerary-submit">
@@ -502,6 +601,51 @@ document.getElementById("addon-filter").addEventListener("change", filterContent
 
 // Add event listener for the "Plan My Trip" button in the itinerary section
 document.querySelector(".itinerary-submit button").addEventListener("click", planItinerary);
+
+
+// Function to sort Trip Summary table by column index
+// THIS SORT IS NOT WORKING but also UNECCESARY
+// function sortTable(columnIndex) {
+//     const table = document.getElementById("trip-summary-table");
+//     let switching = true;
+//     let direction = "asc";
+//     let switchcount = 0;
+
+//     while (switching) {
+//         switching = false;
+//         const rows = table.rows;
+
+//         for (let i = 1; i < (rows.length - 1); i++) {
+//             let shouldSwitch = false;
+//             const x = rows[i].getElementsByTagName("TD")[columnIndex];
+//             const y = rows[i + 1].getElementsByTagName("TD")[columnIndex];
+
+//             // Check if the rows need to be switched
+//             if (direction === "asc") {
+//                 if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+//                     shouldSwitch = true;
+//                     break;
+//                 }
+//             } else if (direction === "desc") {
+//                 if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+//                     shouldSwitch = true;
+//                     break;
+//                 }
+//             }
+//         }
+        
+//         if (shouldSwitch) {
+//             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+//             switching = true;
+//             switchcount++;
+//         } else {
+//             if (switchcount === 0 && direction === "asc") {
+//                 direction = "desc";
+//                 switching = true;
+//             }
+//         }
+//     }
+// }
 </script>
 </body>
 </html>

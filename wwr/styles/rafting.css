@@ -404,13 +404,27 @@ footer .help-button a:hover{
     margin: 2em 0;
 } */
 
-.adventure-cards {
+/* .adventure-cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 2rem;
         padding: 1rem;
         max-width: 1200px;
         margin: 0 auto;
+} */
+
+.adventure-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#fourgrid {
+    max-width: 95%;
+    margin: 0 auto;
 }
 
 .adventure-card {
@@ -431,6 +445,9 @@ footer .help-button a:hover{
 .adventure-card h3{
     font-size: 1.25em;
     margin: .5em;
+}
+.adventure-card p{
+    margin: .15em 0;
 }
 
 .adventure-card:hover {
@@ -1345,7 +1362,7 @@ button[type="submit"]:hover {
 }
 /* Filter Section */
 .filter-section{
-    background: var(--gradient-blue);
+    background: var(--gradient-blue-reverse);
 }
 
 .filter-section h2{
@@ -1588,4 +1605,42 @@ button[type="button"]:hover {
     padding: 0.5rem;
     font-size: 1rem;
     color: var(--primary-dark-blue);
+}
+/* Styling for Trip Summary Section */
+.trip-summary {
+    width: 90%;
+    margin: 2em auto;
+    text-align: center;
+}
+
+.trip-summary h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.trip-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+.trip-summary-table th,
+.trip-summary-table td {
+    padding: 1em;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.trip-summary-table th {
+    background-color: var(--primary-yellow);
+    color: var(--primary-dark-blue);
+    font-weight: bold;
+}
+
+.trip-summary-table td {
+    background-color: #fafafa;
+}
+
+.trip-summary-table tbody tr:hover {
+    background-color: #e8f6f9;
 }
